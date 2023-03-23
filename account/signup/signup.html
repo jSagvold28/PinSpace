@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PinIt - Signup</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>PinIt</h1>
+        <h3>Signup</h3>
+        <p><strong>Welcome!</strong></p>
+    </div>
+
+    <div class="forms-container">
+        <form id="signup-form">
+            <p>Email:</p>
+            <input type="email" id="email" name="email"><br><br>
+
+            <p>Password:</p>
+            <input type="password" id="password" name="password"><br><br>
+
+        </form>
+    </div>
+
+    <div class="submit">
+        <button onclick="saveData()">Signup & Go to App</button>
+    </div>
+
+    <script>
+        function saveData() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Store the email and password in local storage
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+
+            // Redirect to the app page
+            window.location.href = "http://127.0.0.1:5500/.app/app.html";
+        }
+    </script>
+
+    <!-- <div class="disclamers">
+        <p><strong>BY CREATING AN ACCOUNT YOU AGREE TO THE TERMS OF SERVICE (TOS) https://github.com/jSagvold28/ProPass-web/blob/main/account/Account%20TOS.md</strong></p>
+    </div> may use again->
+    
+</body>
+</html>
